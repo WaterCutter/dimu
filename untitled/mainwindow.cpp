@@ -22,7 +22,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_clicked()
 {
     // std::ofstream ofpx("C:\\Users\\hy000\\Desktop\\vcc.txt");
-    std::ifstream ifpx("C:\\Users\\hy000\\Desktop\\vcc.txt");
+    std::ifstream ifpx("../vcc.txt");
     // ofpx<<0<<std::endl;
     char vccVal[32] = {0};
     QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
@@ -38,7 +38,7 @@ void MainWindow::on_pushButton_clicked()
 void MainWindow::onTimeOut()
 {
     // std::ofstream ofpx("C:\\Users\\hy000\\Desktop\\vcc.txt");
-    std::ifstream ifpx("C:\\Users\\hy000\\Desktop\\vcc.txt");
+    std::ifstream ifpx("../vcc.txt");
     // ofpx<<0<<std::endl;
     char vccVal[32] = {0};
     QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
