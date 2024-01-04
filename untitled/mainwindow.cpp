@@ -1,5 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <Windows.h>
+#include "mmonitor.h"
+#include <QThread>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,7 +13,9 @@ MainWindow::MainWindow(QWidget *parent)
     // tim->setInterval(200);
     connect(tim,SIGNAL(timeout()),this,SLOT(onTimeOut()));
     tim->start(2000);
-
+    // monitoring and responsing vcc file modification
+    // QThread* thread = QThread::create(monitorFileModification("../vcc.txt"));
+    // thread->start();
 }
 
 MainWindow::~MainWindow()
