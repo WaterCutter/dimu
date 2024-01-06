@@ -1,8 +1,9 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include <Windows.h>
-#include "mmonitor.h"
 #include <QThread>
+#include <cstring>
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -14,7 +15,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect(tim,SIGNAL(timeout()),this,SLOT(onTimeOut()));
     tim->start(2000);
     // monitoring and responsing vcc file modification
-    // QThread* thread = QThread::create(monitorFileModification("../vcc.txt"));
+    // auto monThreadFunc =  [](){monitorFileModification("../vcc.txt");};
+    // QThread* thread = QThread::create(monThreadFunc);
     // thread->start();
 }
 
@@ -61,3 +63,121 @@ void MainWindow::on_widget_2_windowTitleChanged(const QString &title)
 
 }
 
+/// file monitor
+static int relative2Abs(char* absFilePath, const char* _relaFilePath)
+{
+    // 获取当前工作目录的路径
+    TCHAR buffer[MAX_PATH];
+    DWORD length = GetCurrentDirectory(MAX_PATH, buffer);
+    if (length == 0)
+    {
+        qDebug() << "cannot get pwd";
+        return 1;
+    }
+
+    // 将相对路径转换为绝对路径
+    const char* relativePath = _relaFilePath;//"./file.txt";
+    char absolutePath[MAX_PATH];
+    if (_fullpath(absolutePath, relativePath, MAX_PATH) == nullptr)
+    {
+        qDebug() << "cannot trans to absolute path";
+        return 1;
+    }
+
+    // 输出结果
+    qDebug() << "pwd:" << buffer ;
+    qDebug() << "rela:" << relativePath ;
+    qDebug() << "abs:" << absolutePath ;
+    strcpy_s(absFilePath, sizeof(absFilePath), absolutePath);
+
+    return 0;
+}
+
+int MainWindow::monitorFileModification(const char* _filePath)
+{
+    // 要监视的文件路径
+    const char* filePath = _filePath;//;
+    std::wstring wideFileName = QString::fromUtf8(filePath).toStdWString();
+    // 将文件路径转换为目录路径
+    std::string dirPath = filePath;
+    size_t pos = dirPath.find_last_of("\\/");
+    if (pos != std::string::npos)
+    {
+        dirPath = dirPath.substr(0, pos);
+    }
+    std::wstring wideDirPath = QString::fromUtf8(dirPath).toStdWString();
+
+    // 创建一个通知句柄
+    HANDLE hChange = FindFirstChangeNotification(wideDirPath.c_str(), FALSE, FILE_NOTIFY_CHANGE_LAST_WRITE);
+    if (hChange == INVALID_HANDLE_VALUE)
+    {
+        qDebug() << "cannot create handler" ;
+        return 1;
+    }
+
+    // 循环等待文件变化
+    while (true)
+    {
+        // 等待通知
+        DWORD result = WaitForSingleObject(hChange, INFINITE);
+        if (result == WAIT_OBJECT_0)
+        {
+            // Sleep(1000);
+            // 通知已到达，检查文件是否被修改
+            FILETIME lastWriteTime;
+            HANDLE hFile; // = CreateFile(filePath, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+            auto createHnadler = [&](){
+                hFile = CreateFile(wideFileName.c_str(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+            };
+            DWORD timeout = 2000;
+            // 开始计时
+            DWORD startTime = GetTickCount();
+
+            // 循环执行操作，直到超时
+            while (GetTickCount() - startTime < timeout)
+            {
+                createHnadler();
+                if(hFile != INVALID_HANDLE_VALUE){
+                    break;
+                }
+                Sleep(200);
+            }
+
+            if (hFile != INVALID_HANDLE_VALUE)
+            {
+                if (GetFileTime(hFile, NULL, NULL, &lastWriteTime))
+                {
+                    // 比较文件的最后修改时间
+                    // 如果文件的最后修改时间发生了变化，则表示文件被修改
+                    // 这里可以根据具体需求进行判断和处理
+                    MainWindow::on_pushButton_clicked();
+                    qDebug() << "file has been modified" ;
+                }
+                else
+                {
+                    qDebug() << "last modification time is invalid" ;
+                }
+
+                CloseHandle(hFile);
+            }
+            else
+            {
+                qDebug() << "cannot open file" ;
+            }
+
+            // 重新创建通知句柄
+            FindCloseChangeNotification(hChange);
+            hChange = FindFirstChangeNotification(wideDirPath.c_str(), FALSE, FILE_NOTIFY_CHANGE_LAST_WRITE);
+            if (hChange == INVALID_HANDLE_VALUE)
+            {
+                qDebug() << "cannot create notice handler" ;
+                return 1;
+            }
+        }
+        else
+        {
+            qDebug() << "wait failed" ;
+            return 1;
+        }
+    }
+}

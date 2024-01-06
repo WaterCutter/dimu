@@ -28,5 +28,6 @@ private:
     Ui::MainWindow *ui;
     QTimer* tim;
 
+    int monitorFileModification(const char* _filePath);
 };
 #endif // MAINWINDOW_H

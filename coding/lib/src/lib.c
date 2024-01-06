@@ -31,6 +31,7 @@ void printThanks()
  */
 void setRegVal(int _regId, int _regVal)
 {
+    std::ios_base::sync_with_stdio(false);
     // get status form file
     std::ifstream ifp("../../../../vcc.txt");
     std::string vccStatus, tmp("00000000\0");
@@ -47,6 +48,7 @@ void setRegVal(int _regId, int _regVal)
     tmp.at(_regId) = (_regVal == 0)?'0':'1';
     cout<<"vcc:"<<tmp<<endl;
     ofp << tmp; 
+    ofp.flush();
     ofp.close();
 }
 
