@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
         setRegVal(i,0);
     for(int i=0;i<8;i+=tic){
         setRegVal(i,val);
-        Sleep(2000);
+        Sleep(300);
         if(i==7){
             i=0;
             val = (val==0)?1:0;

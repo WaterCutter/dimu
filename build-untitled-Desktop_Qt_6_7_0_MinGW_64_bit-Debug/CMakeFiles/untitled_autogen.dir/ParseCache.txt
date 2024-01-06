@@ -47,6 +47,7 @@ L:/Working/s231101/dimu/untitled/mainwindow.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qglobalstatic.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qhash.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qhashfunctions.h
+ mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qiodevice.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qiodevicebase.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qiterable.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qiterator.h
@@ -115,6 +116,7 @@ L:/Working/s231101/dimu/untitled/mainwindow.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtversionchecks.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtypeinfo.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtypes.h
+ mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qurl.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qutf8stringview.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qvariant.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qvarlengtharray.h
@@ -135,19 +137,24 @@ L:/Working/s231101/dimu/untitled/mainwindow.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h
+ mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpicture.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qregion.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h
+ mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtgui-config.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtguiexports.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtguiglobal.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h
+ mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/QLabel
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow
+ mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h
+ mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qtabwidget.h
@@ -356,6 +363,7 @@ L:/Working/s231101/dimu/untitled/mainwindow.h
  mdp:L:/SoftWares/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/untitled_autogen/moc_predefs.h
  mdp:L:/Working/s231101/dimu/untitled/mainwindow.h
+ uic:./ui_mainwindow.h
 L:/Working/s231101/dimu/untitled/mainwindow.cpp
  uic:./ui_mainwindow.h
 L:/Working/s231101/dimu/untitled/main.cpp

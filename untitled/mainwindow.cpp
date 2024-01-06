@@ -10,42 +10,51 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    tim = new QTimer();
-    // tim->setInterval(200);
-    connect(tim,SIGNAL(timeout()),this,SLOT(onTimeOut()));
-    tim->start(2000);
+    // auto flash
+    tim_ = new QTimer();
+    connect(tim_,SIGNAL(timeout()),this,SLOT(onTimeOut()));
+    tim_->start(2000);
     // monitoring and responsing vcc file modification
-    auto monThreadFunc =  [=](){monitorFileModification("../vcc.txt");};
+    auto monThreadFunc =  [=](){monitorFileModification(vccFilePath_.c_str());};
     QThread* thread = QThread::create(monThreadFunc);
     thread->start();
 }
 
 MainWindow::~MainWindow()
 {
+    delete tim_;
     delete ui;
 }
 
+void MainWindow::configRegGUIStatus(const char* _vccVal)
+{
+    static QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
+    for(int i=0; i<8; i++){
+        if ( _vccVal[i] != regStatus_.at(i) ){
+            (_vccVal[i]=='1')
+                ?(regTable[i]->setStyleSheet("QLabel{background-color:rgb(255,101,102);}"))
+                :(regTable[i]->setStyleSheet("QLabel{background-color:rgb(0,101,102);}"));
+        }
+    }
+    regStatus_ = std::string(_vccVal);
+}
+
 #include <fstream>
+// pushbutton & file modified
 void MainWindow::on_pushButton_clicked()
 {
     // std::ofstream ofpx("C:\\Users\\hy000\\Desktop\\vcc.txt");
-    std::ifstream ifpx("../vcc.txt");
-    // ofpx<<0<<std::endl;
+    std::ifstream ifpx(vccFilePath_);
     char vccVal[32] = {0};
-    QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
 
     ifpx.getline(vccVal,32);
-    for(int i=0; i<8; i++){
-        (vccVal[i]=='1')
-            ?(regTable[i]->setStyleSheet("QLabel{background-color:rgb(255,101,102);}"))
-            :(regTable[i]->setStyleSheet("QLabel{background-color:rgb(0,101,102);}"));
-    }
+    configRegGUIStatus(vccVal);
 }
 
 void MainWindow::onTimeOut()
 {
     // std::ofstream ofpx("C:\\Users\\hy000\\Desktop\\vcc.txt");
-    std::ifstream ifpx("../vcc.txt");
+    std::ifstream ifpx(vccFilePath_);
     // ofpx<<0<<std::endl;
     char vccVal[32] = {0};
     QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
@@ -62,7 +71,6 @@ void MainWindow::on_widget_2_windowTitleChanged(const QString &title)
 {
 
 }
-
 
 /// not used yet
 static int relative2Abs(char* absFilePath, const char* _relaFilePath)

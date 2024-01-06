@@ -46,6 +46,7 @@ L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/untit
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qglobalstatic.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qhash.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qhashfunctions.h \
+  L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qiodevice.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qiodevicebase.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qiterable.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qiterator.h \
@@ -114,6 +115,7 @@ L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/untit
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtversionchecks.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtypeinfo.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtypes.h \
+  L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qurl.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qutf8stringview.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qvariant.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -134,19 +136,24 @@ L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/untit
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h \
+  L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qregion.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h \
+  L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtgui-config.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtguiexports.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtguiglobal.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow \
+  L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+  L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qtabwidget.h \
