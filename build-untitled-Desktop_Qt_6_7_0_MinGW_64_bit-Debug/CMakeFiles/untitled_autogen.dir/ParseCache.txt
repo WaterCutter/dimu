@@ -356,9 +356,9 @@ L:/Working/s231101/dimu/untitled/mainwindow.h
  mdp:L:/SoftWares/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/untitled_autogen/moc_predefs.h
  mdp:L:/Working/s231101/dimu/untitled/mainwindow.h
-L:/Working/s231101/dimu/untitled/main.cpp
 L:/Working/s231101/dimu/untitled/mainwindow.cpp
  uic:./ui_mainwindow.h
+L:/Working/s231101/dimu/untitled/main.cpp
 L:/Working/s231101/dimu/untitled/file_modify_moniter.h
  mmc:Q_OBJECT
  mdp:L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/QCoreApplication

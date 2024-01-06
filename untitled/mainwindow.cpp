@@ -15,9 +15,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(tim,SIGNAL(timeout()),this,SLOT(onTimeOut()));
     tim->start(2000);
     // monitoring and responsing vcc file modification
-    // auto monThreadFunc =  [](){monitorFileModification("../vcc.txt");};
-    // QThread* thread = QThread::create(monThreadFunc);
-    // thread->start();
+    auto monThreadFunc =  [=](){monitorFileModification("../vcc.txt");};
+    QThread* thread = QThread::create(monThreadFunc);
+    thread->start();
 }
 
 MainWindow::~MainWindow()
@@ -63,7 +63,8 @@ void MainWindow::on_widget_2_windowTitleChanged(const QString &title)
 
 }
 
-/// file monitor
+
+/// not used yet
 static int relative2Abs(char* absFilePath, const char* _relaFilePath)
 {
     // 获取当前工作目录的路径
@@ -92,7 +93,7 @@ static int relative2Abs(char* absFilePath, const char* _relaFilePath)
 
     return 0;
 }
-
+/// file monitor
 int MainWindow::monitorFileModification(const char* _filePath)
 {
     // 要监视的文件路径
