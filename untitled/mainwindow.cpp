@@ -11,9 +11,9 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     // auto flash
-    tim_ = new QTimer();
-    connect(tim_,SIGNAL(timeout()),this,SLOT(onTimeOut()));
-    tim_->start(2000);
+    // tim_ = new QTimer();
+    // connect(tim_,SIGNAL(timeout()),this,SLOT(onTimeOut()));
+    // tim_->start(2000);
     // monitoring and responsing vcc file modification
     auto monThreadFunc =  [=](){monitorFileModification(vccFilePath_.c_str());};
     QThread* thread = QThread::create(monThreadFunc);
@@ -34,7 +34,9 @@ void MainWindow::configRegGUIStatus(const char* _vccVal)
             (_vccVal[i]=='1')
                 ?(regTable[i]->setStyleSheet("QLabel{background-color:rgb(255,101,102);}"))
                 :(regTable[i]->setStyleSheet("QLabel{background-color:rgb(0,101,102);}"));
+            ui->label->setText(QString::number(tics++));
         }
+
     }
     regStatus_ = std::string(_vccVal);
 }

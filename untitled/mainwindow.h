@@ -32,5 +32,6 @@ private:
     std::string regStatus_ = "000000000";
     int monitorFileModification(const char* _filePath);
     void configRegGUIStatus(const char* _vccVal);
+    unsigned int tics = 0;
 };
 #endif // MAINWINDOW_H

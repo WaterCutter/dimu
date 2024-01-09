@@ -36,6 +36,7 @@ public:
     QLabel *rega;
     QLabel *regh;
     QPushButton *pushButton;
+    QLabel *label;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -95,6 +96,9 @@ public:
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
         pushButton->setGeometry(QRect(230, 50, 80, 23));
+        label = new QLabel(centralwidget);
+        label->setObjectName("label");
+        label->setGeometry(QRect(240, 215, 71, 20));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -122,6 +126,7 @@ public:
         rega->setText(QCoreApplication::translate("MainWindow", "a", nullptr));
         regh->setText(QCoreApplication::translate("MainWindow", "h", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "PushButton", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
     } // retranslateUi
 
 };

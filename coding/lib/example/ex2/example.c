@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "../../src/lib.h"
 #include <windows.h>
+
+unsigned int tics = 0;
 int main(int argc, char* argv[])
 {
     printf("hello dimu\n");
@@ -16,6 +18,8 @@ int main(int argc, char* argv[])
             i=0;
             val = (val==0)?1:0;
         }
+        printf("%d # ", tics++);
     }
+    
     return 0;
 }
