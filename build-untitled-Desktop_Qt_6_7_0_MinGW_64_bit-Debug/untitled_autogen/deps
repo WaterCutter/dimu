@@ -162,6 +162,7 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow \
+	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/QWidget \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h \
@@ -582,9 +583,12 @@ untitled_autogen/timestamp: \
 	L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/3.27.7/CMakeSystem.cmake \
 	L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/untitled_autogen/moc_predefs.h \
 	L:/Working/s231101/dimu/untitled/CMakeLists.txt \
+	L:/Working/s231101/dimu/untitled/digi8.cpp \
+	L:/Working/s231101/dimu/untitled/digi8.h \
 	L:/Working/s231101/dimu/untitled/file_modify_moniter.h \
 	L:/Working/s231101/dimu/untitled/main.cpp \
 	L:/Working/s231101/dimu/untitled/mainwindow.cpp \
 	L:/Working/s231101/dimu/untitled/mainwindow.h \
+	L:/Working/s231101/dimu/untitled/digi8.ui \
 	L:/Working/s231101/dimu/untitled/mainwindow.ui \
 	L:/SoftWares/Qt/Tools/CMake_64/bin/cmake.exe

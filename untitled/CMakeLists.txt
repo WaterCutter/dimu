@@ -24,6 +24,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         file_modify_moniter.h
+        digi8.h digi8.cpp digi8.ui
 
     )
 # Define target properties for Android with Qt 6 as:

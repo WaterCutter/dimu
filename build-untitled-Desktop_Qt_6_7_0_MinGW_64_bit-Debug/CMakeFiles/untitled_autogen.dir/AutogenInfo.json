@@ -295,6 +295,12 @@
 	"HEADERS" : 
 	[
 		[
+			"L:/Working/s231101/dimu/untitled/digi8.h",
+			"MU",
+			"EWIEGA46WW/moc_digi8.cpp",
+			null
+		],
+		[
 			"L:/Working/s231101/dimu/untitled/file_modify_moniter.h",
 			"MU",
 			"EWIEGA46WW/moc_file_modify_moniter.cpp",
@@ -378,6 +384,7 @@
 	"SETTINGS_FILE" : "L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/untitled_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "L:/Working/s231101/dimu/untitled/digi8.cpp", "MU", null ],
 		[ "L:/Working/s231101/dimu/untitled/main.cpp", "MU", null ],
 		[ "L:/Working/s231101/dimu/untitled/mainwindow.cpp", "MU", null ]
 	],

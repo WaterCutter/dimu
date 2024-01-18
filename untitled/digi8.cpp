@@ -1,37 +1,37 @@
-#include "mainwindow.h"
-#include "./ui_mainwindow.h"
-#include <Windows.h>
-#include <QThread>
-#include <cstring>
-#include <QDebug>
 #include "digi8.h"
-#include <QVBoxLayout>
+#include "ui_digi8.h"
+#include <Windows.h>
+#include <fstream>
+#include <QThread>
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+digi8::digi8(QWidget *parent)
+    : QWidget(parent)
+    , ui(new Ui::digi8)
 {
     ui->setupUi(this);
-    // auto flash
-    // tim_ = new QTimer();
-    // connect(tim_,SIGNAL(timeout()),this,SLOT(onTimeOut()));
-    // tim_->start(2000);
-    // monitoring and responsing vcc file modification
-
-    auto *customWidget = new digi8(this, this->vccFilePath_);
-
-    // auto monThreadFunc =  [=](){monitorFileModification(vccFilePath_.c_str());};
-    // QThread* thread = QThread::create(monThreadFunc);
-    // thread->start();
+    auto monThreadFunc =  [=](){monitorFileModification(vccFilePath_.c_str());};
+    QThread* thread = QThread::create(monThreadFunc);
+    thread->start();
 }
 
-MainWindow::~MainWindow()
+digi8::digi8(QWidget *parent, std::string vccFilePath)
+    : QWidget(parent)
+    , vccFilePath_(vccFilePath)
+    , ui(new Ui::digi8)
 {
-    delete tim_;
+    ui->setupUi(this);
+    auto monThreadFunc =  [=](){monitorFileModification(vccFilePath_.c_str());};
+    QThread* thread = QThread::create(monThreadFunc);
+    thread->start();
+}
+
+digi8::~digi8()
+{
     delete ui;
 }
 
-void MainWindow::configRegGUIStatus(const char* _vccVal)
+
+void digi8::configRegGUIStatus(const char* _vccVal)
 {
     static QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
     for(int i=0; i<8; i++){
@@ -39,16 +39,13 @@ void MainWindow::configRegGUIStatus(const char* _vccVal)
             (_vccVal[i]=='1')
                 ?(regTable[i]->setStyleSheet("QLabel{background-color:rgb(255,101,102);}"))
                 :(regTable[i]->setStyleSheet("QLabel{background-color:rgb(0,101,102);}"));
-            ui->label->setText(QString::number(tics++));
+            // ui->label->setText(QString::number(tics++));
         }
 
     }
     regStatus_ = std::string(_vccVal);
 }
-
-#include <fstream>
-// pushbutton & file modified
-void MainWindow::on_pushButton_clicked()
+void digi8::updateRegStatus()
 {
     // std::ofstream ofpx("C:\\Users\\hy000\\Desktop\\vcc.txt");
     std::ifstream ifpx(vccFilePath_);
@@ -58,58 +55,7 @@ void MainWindow::on_pushButton_clicked()
     configRegGUIStatus(vccVal);
 }
 
-void MainWindow::onTimeOut()
-{
-    // std::ofstream ofpx("C:\\Users\\hy000\\Desktop\\vcc.txt");
-    std::ifstream ifpx(vccFilePath_);
-    // ofpx<<0<<std::endl;
-    char vccVal[32] = {0};
-    QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
-
-    ifpx.getline(vccVal,32);
-    for(int i=0; i<8; i++){
-        (vccVal[i]=='1')
-            ?(regTable[i]->setStyleSheet("QLabel{background-color:rgb(255,101,102);}"))
-            :(regTable[i]->setStyleSheet("QLabel{background-color:rgb(0,101,102);}"));
-    }
-}
-
-void MainWindow::on_widget_2_windowTitleChanged(const QString &title)
-{
-
-}
-
-/// not used yet
-static int relative2Abs(char* absFilePath, const char* _relaFilePath)
-{
-    // 获取当前工作目录的路径
-    TCHAR buffer[MAX_PATH];
-    DWORD length = GetCurrentDirectory(MAX_PATH, buffer);
-    if (length == 0)
-    {
-        qDebug() << "cannot get pwd";
-        return 1;
-    }
-
-    // 将相对路径转换为绝对路径
-    const char* relativePath = _relaFilePath;//"./file.txt";
-    char absolutePath[MAX_PATH];
-    if (_fullpath(absolutePath, relativePath, MAX_PATH) == nullptr)
-    {
-        qDebug() << "cannot trans to absolute path";
-        return 1;
-    }
-
-    // 输出结果
-    qDebug() << "pwd:" << buffer ;
-    qDebug() << "rela:" << relativePath ;
-    qDebug() << "abs:" << absolutePath ;
-    strcpy_s(absFilePath, sizeof(absFilePath), absolutePath);
-
-    return 0;
-}
-/// file monitor
-int MainWindow::monitorFileModification(const char* _filePath)
+int digi8::monitorFileModification(const char* _filePath)
 {
     // 要监视的文件路径
     const char* filePath = _filePath;//;
@@ -166,7 +112,7 @@ int MainWindow::monitorFileModification(const char* _filePath)
                     // 比较文件的最后修改时间
                     // 如果文件的最后修改时间发生了变化，则表示文件被修改
                     // 这里可以根据具体需求进行判断和处理
-                    MainWindow::on_pushButton_clicked();
+                    digi8::updateRegStatus();
                     qDebug() << "file has been modified" ;
                 }
                 else
