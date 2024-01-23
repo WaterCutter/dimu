@@ -3,5 +3,8 @@
 
 void printThanks();
 void setRegVal(int _regId, int _regVal);
-
+void setSpecifiedDigitalRegVal(
+    unsigned int _digi,
+    int _regId, 
+    int _regVal);
 #endif
