@@ -64,7 +64,6 @@ void digi8::configRegGUIStatus(const char* _vccVal)
             // ui->label->setText(QString::number(tics++));
             qDebug() << "configRegGUIStatus" << this->vccFilePath_;
         }
-
     }
     regStatus_ = std::string(_vccVal);
 }
