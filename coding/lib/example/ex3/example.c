@@ -11,17 +11,20 @@ int main(int argc, char* argv[])
     //     setSpecifiedDigitalRegVal(0,1,1);
     int tic=1, val=1;
     for(int i=0;i<8;i+=tic)
-        for(int j=0;j<1;j++)
-            setSpecifiedDigitalRegVal(0,i,0);
+        for(int j=0;j<2;j++)
+            setSpecifiedDigitalRegVal(j,i,0);
+
     for(int i=0;i<8;i+=tic){
-        for(int j=0;j<1;j++)
-            setSpecifiedDigitalRegVal(0,i,val);
-        Sleep(300);
+        
+        setSpecifiedDigitalRegVal(0,i,val);Sleep(20);
+        setSpecifiedDigitalRegVal(1,i,val);
+        Sleep(400);
         if(i==7){
             i=0;
             val = (val==0)?1:0;
         }
         printf("%d # ", tics++);
+        
     }
     
     return 0;

@@ -18,10 +18,12 @@ MainWindow::MainWindow(QWidget *parent)
     this->setCentralWidget(centralWidget);
     QHBoxLayout *layout = new QHBoxLayout(centralWidget);
 
-    for(int i=0;i<5;i++){
-        digitals_[i] = new digi8(this, this->vccFilePaths_[i], 100);
-        layout->addWidget(digitals_[i]);
-    }
+
+    digitals_[0] = new digi8(this, "../vcc0.txt", 100);
+    layout->addWidget(digitals_[0]);
+    digitals_[1] = new digi8(this, "../vcc1.txt", 100);
+    layout->addWidget(digitals_[1]);
+
 
 }
 
@@ -33,17 +35,17 @@ MainWindow::~MainWindow()
 
 void MainWindow::configRegGUIStatus(const char* _vccVal)
 {
-    static QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
-    for(int i=0; i<8; i++){
-        if ( _vccVal[i] != regStatus_.at(i) ){
-            (_vccVal[i]=='1')
-                ?(regTable[i]->setStyleSheet("QLabel{background-color:rgb(255,101,102);}"))
-                :(regTable[i]->setStyleSheet("QLabel{background-color:rgb(0,101,102);}"));
-            ui->label->setText(QString::number(tics++));
-        }
+    // static QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
+    // for(int i=0; i<8; i++){
+    //     if ( _vccVal[i] != regStatus_.at(i) ){
+    //         (_vccVal[i]=='1')
+    //             ?(regTable[i]->setStyleSheet("QLabel{background-color:rgb(255,101,102);}"))
+    //             :(regTable[i]->setStyleSheet("QLabel{background-color:rgb(0,101,102);}"));
+    //         ui->label->setText(QString::number(tics++));
+    //     }
 
-    }
-    regStatus_ = std::string(_vccVal);
+    // }
+    // regStatus_ = std::string(_vccVal);
 }
 
 #include <fstream>

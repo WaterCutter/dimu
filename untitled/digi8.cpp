@@ -9,6 +9,7 @@ digi8::digi8(QWidget *parent)
     , ui(new Ui::digi8)
 {
     ui->setupUi(this);
+
     auto monThreadFunc =  [=](){monitorFileModification(vccFilePath_.c_str());};
     QThread* thread = QThread::create(monThreadFunc);
     thread->start();
@@ -35,6 +36,12 @@ digi8::digi8(QWidget *parent,
     , ui(new Ui::digi8)
 {
     ui->setupUi(this);
+
+    std::ofstream ofpx(vccFilePath_);
+    ofpx<<"11111111";
+    ofpx.flush();
+    ofpx.close();
+
     auto monThreadFunc =  [=](){monitorFileModification(vccFilePath_.c_str());};
     QThread* thread = QThread::create(monThreadFunc);
     thread->start();
@@ -48,13 +55,14 @@ digi8::~digi8()
 
 void digi8::configRegGUIStatus(const char* _vccVal)
 {
-    static QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
+    QLabel* regTable[8] = {ui->rega,ui->regb,ui->regc,ui->regd,ui->rege,ui->regf,ui->regg,ui->regh,};
     for(int i=0; i<8; i++){
         if ( _vccVal[i] != regStatus_.at(i) ){
             (_vccVal[i]=='1')
                 ?(regTable[i]->setStyleSheet("QLabel{background-color:rgb(255,101,102);}"))
                 :(regTable[i]->setStyleSheet("QLabel{background-color:rgb(0,101,102);}"));
             // ui->label->setText(QString::number(tics++));
+            qDebug() << "configRegGUIStatus" << this->vccFilePath_;
         }
 
     }
@@ -68,7 +76,7 @@ void digi8::updateRegStatus()
     char vccVal[32] = {0};
 
     ifpx.getline(vccVal,32);
-    configRegGUIStatus(vccVal);
+    this->configRegGUIStatus(vccVal);
 }
 
 /// not used yet
@@ -240,8 +248,8 @@ int digi8::monitorFileModification(const char* _filePath)
                     // 比较文件的最后修改时间
                     // 如果文件的最后修改时间发生了变化，则表示文件被修改
                     // 这里可以根据具体需求进行判断和处理
-                    digi8::updateRegStatus();
-                    qDebug() << "file has been modified" ;
+                    this->updateRegStatus();
+                    qDebug() << "file has been modified" << this->vccFilePath_ ;
                 }
                 else
                 {
