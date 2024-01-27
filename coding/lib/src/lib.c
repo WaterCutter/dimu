@@ -25,6 +25,42 @@ void printThanks()
 
 /* 
     @brief
+        set digital status(every reg) as bit in _stat 
+    @param
+
+        _digi: which digital to set
+        _stat: digital status, bit -> reg
+ */
+void setSpecifiedDigitalStatus(
+    unsigned int _digi,
+    unsigned int _stat)
+{
+    std::ios_base::sync_with_stdio(false);
+    // get status form file
+    const std::string vccFilePath = "../../../../vcc" + std::to_string(_digi) + ".txt";
+
+    auto hexToBinary = [](unsigned int hex)->std::string{
+        std::string binary;
+        unsigned int mask = 1;
+        for (int i = 0; i < 8; i++) {
+            binary += (hex & mask) ? '1' : '0';
+            hex >>= 1;
+        }
+        
+        cout << "binary:" << binary << endl;return binary;
+    };
+    std::string tmp(hexToBinary(_stat));
+
+    // set status to file
+    std::ofstream ofp(vccFilePath);
+    cout<<"vcc:"<<tmp<<endl;
+    ofp << tmp; 
+    ofp.flush();
+    ofp.close();
+}
+
+/* 
+    @brief
         set _refId(pin to target reg of specified digital) as _regVal 
     @param
 

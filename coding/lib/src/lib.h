@@ -7,4 +7,7 @@ void setSpecifiedDigitalRegVal(
     unsigned int _digi,
     int _regId, 
     int _regVal);
+void setSpecifiedDigitalStatus(
+    unsigned int _digi,
+    unsigned int _stat);
 #endif

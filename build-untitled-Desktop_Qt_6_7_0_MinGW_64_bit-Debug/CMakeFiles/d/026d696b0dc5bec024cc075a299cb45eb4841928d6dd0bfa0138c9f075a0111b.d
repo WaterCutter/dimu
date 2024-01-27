@@ -787,6 +787,9 @@ untitled_autogen/timestamp: \
   L:/Working/s231101/dimu/untitled/digi8.cpp \
   L:/Working/s231101/dimu/untitled/digi8.h \
   L:/Working/s231101/dimu/untitled/digi8.ui \
+  L:/Working/s231101/dimu/untitled/digital14.cpp \
+  L:/Working/s231101/dimu/untitled/digital14.h \
+  L:/Working/s231101/dimu/untitled/digital14.ui \
   L:/Working/s231101/dimu/untitled/main.cpp \
   L:/Working/s231101/dimu/untitled/mainwindow.cpp \
   L:/Working/s231101/dimu/untitled/mainwindow.h \

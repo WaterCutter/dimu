@@ -301,6 +301,12 @@
 			null
 		],
 		[
+			"L:/Working/s231101/dimu/untitled/digital14.h",
+			"MU",
+			"EWIEGA46WW/moc_digital14.cpp",
+			null
+		],
+		[
 			"L:/Working/s231101/dimu/untitled/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -379,6 +385,7 @@
 	"SOURCES" : 
 	[
 		[ "L:/Working/s231101/dimu/untitled/digi8.cpp", "MU", null ],
+		[ "L:/Working/s231101/dimu/untitled/digital14.cpp", "MU", null ],
 		[ "L:/Working/s231101/dimu/untitled/main.cpp", "MU", null ],
 		[ "L:/Working/s231101/dimu/untitled/mainwindow.cpp", "MU", null ]
 	],
