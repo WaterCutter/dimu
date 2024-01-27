@@ -8,7 +8,6 @@ A 8-bits digital tube emulator on Windows OS (temporarily)
 - Examples build with ```GCC``` (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
 
 ## hello dimu
-![hello dimu](./img/main.png)
 > you can show hello on emulator GUI with applicaion code: dimu\coding\lib\example\ex4
 ```c
 #include <stdio.h>
@@ -29,9 +28,13 @@ int main(int argc, char* argv[])
     return 0;
 }
 ```
-
+![hello dimu](./img/main.png)
 
 ## System Organization
+
+### modules view
+The diagram shown below is a typical, but not specific, realationships between DIMU modules.
+![](./img/sysorgb.png)
 
 ### files view
 
@@ -53,10 +56,6 @@ int main(int argc, char* argv[])
 │  └─monitor
 └─untitled
 ```
-
-### modules view
-The diagram shown below is a typical, but not specific, realationships between DIMU modules.
-![](./img/sysorgb.png)
 
 ## Usage
 
@@ -125,6 +124,7 @@ the DIMU GUI whould be like:
 PS ex2> pwd
 dimu\coding\lib\example\ex2
 ```
+Compile and link application code, generating executable file.
 ```batch
 PS ex2> .\makefile.bat
 g++ -c ../../src/lib.c -o ../../src/lib.o
@@ -135,7 +135,9 @@ g++ example.c -o main -L ../../lib -llib
 PS ex2> ls
 300ms.png example.c main.exe makefile.bat
 ```
-Execute main.exe, start changing vcc input to digital tube in emulator, we can see vcc modificaiton log in terminal and the state of digital tube changes. 
+Execute main.exe, start changing vcc input to digital tube in emulator.
+
+We can see vcc modificaiton log in terminal and the state of digital tube changes. 
 > vcc modificaiton log
 ---
 ```batch
