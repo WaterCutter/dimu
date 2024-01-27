@@ -3,32 +3,8 @@
 A 8-bits digital tube emulator on Windows OS (temporarily)
 
 - Base on ```Qt 6```, edit with ```Qt Creator``` and ```VS Code```
-![](./img/codingmomentm.png)
 - Build with ```CMake 3.27.7```
 - Examples build with ```GCC``` (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
-
-## hello dimu
-> you can show hello on emulator GUI with applicaion code: dimu\coding\lib\example\ex4
-```c
-#include <stdio.h>
-#include "../../src/lib.h"
-#include <windows.h>
-
-int main(int argc, char* argv[])
-{
-    for(int j=0;j<5;j++)
-        setSpecifiedDigitalStatus(j,0);
-
-    setSpecifiedDigitalStatus(0,0x76);//H
-    setSpecifiedDigitalStatus(1,0x79);//E
-    setSpecifiedDigitalStatus(2,0x38);//L
-    setSpecifiedDigitalStatus(3,0x38);//L
-    setSpecifiedDigitalStatus(4,0x3f);//O
-
-    return 0;
-}
-```
-![hello dimu](./img/main.png)
 
 ## System Organization
 
@@ -56,6 +32,31 @@ The diagram shown below is a typical, but not specific, realationships between D
 │  └─monitor
 └─untitled
 ```
+
+## hello dimu
+> you can show hello on emulator GUI with applicaion code: dimu\coding\lib\example\ex4
+```c
+#include <stdio.h>
+#include "../../src/lib.h"
+#include <windows.h>
+
+int main(int argc, char* argv[])
+{
+    for(int j=0;j<5;j++)
+        setSpecifiedDigitalStatus(j,0);
+
+    setSpecifiedDigitalStatus(0,0x76);//H
+    setSpecifiedDigitalStatus(1,0x79);//E
+    setSpecifiedDigitalStatus(2,0x38);//L
+    setSpecifiedDigitalStatus(3,0x38);//L
+    setSpecifiedDigitalStatus(4,0x3f);//O
+
+    return 0;
+}
+```
+![hello dimu](./img/main.png)
+
+
 
 ## Usage
 
