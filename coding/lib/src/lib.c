@@ -46,7 +46,6 @@ void setSpecifiedDigitalStatus(
             binary += (hex & mask) ? '1' : '0';
             hex >>= 1;
         }
-        
         cout << "binary:" << binary << endl;return binary;
     };
     std::string tmp(hexToBinary(_stat));

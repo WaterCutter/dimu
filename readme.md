@@ -160,10 +160,12 @@ vcc:10000000
 2 # vcc:11110000
 3 # vcc:11111000
 4 # vcc:11111100
+...
+50 # vcc:10111111
 ```
 > the state of digital tube changes
 ---
-![](./video/ex2.gif)
+![](./img/ex2.png)
 
 ## Learned 
 
