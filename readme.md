@@ -6,6 +6,8 @@ A 8-bits digital tube emulator on Windows OS (temporarily)
 - Build with ```CMake 3.27.7```
 - Examples build with ```GCC``` (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
 
+![](./video/dimushow.gif)
+
 ## System Organization
 
 ### modules view
@@ -55,8 +57,6 @@ int main(int argc, char* argv[])
 }
 ```
 ![hello dimu](./img/main.png)
-
-
 
 ## Usage
 
