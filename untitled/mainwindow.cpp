@@ -19,8 +19,11 @@ MainWindow::MainWindow(QWidget *parent)
     QHBoxLayout *layout = new QHBoxLayout(centralWidget);
 
 
-    digitals_[0] = new digi8(this, "../vcc0.txt", 100);
-    layout->addWidget(digitals_[0]);
+    for(int i=0;i<4;i++){
+        digitals_[i] = new digi8(this, vccFilePaths_[i], 100);
+        layout->addWidget(digitals_[i]);
+    }
+
     digitals_[1] = new digi8(this, "../vcc1.txt", 100);
     layout->addWidget(digitals_[1]);
 

@@ -18,7 +18,7 @@ public:
 public slots:
     void startWatching()
     {
-        // 在新线程中执行监视任务
+        // monitoring file modification event in new thread
         QThread* thread = new QThread();
         connect(thread, &QThread::started, this, &FileWatcher::watchFile);
         connect(this, &FileWatcher::finished, thread, &QThread::quit);
@@ -38,7 +38,7 @@ private:
         // 监视文件变化
         while (true)
         {
-            // // 检查文件是否被修改，这里使用了简单的定时器来模拟检测
+            // //
             QThread::sleep(1); // 每秒检测一次
 
         }

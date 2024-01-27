@@ -1,7 +1,4 @@
 untitled_autogen/timestamp: \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/QCoreApplication \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/QDebug \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/QThread \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
@@ -33,16 +30,10 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qcontainerinfo.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qcontainertools_impl.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qcontiguouscache.h \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qcoreapplication.h \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qcoreevent.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qdarwinhelpers.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qdatastream.h \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qdeadlinetimer.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qdebug.h \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qelapsedtimer.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qendian.h \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qeventloop.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qexceptionhandling.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qflags.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qfloat16.h \
@@ -70,7 +61,6 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qmetatype.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qminmax.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qnamespace.h \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qnativeinterface.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qnumeric.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qobject.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qobject_impl.h \
@@ -113,7 +103,6 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtextstream.h \
-	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qthread.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtimer.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtmetamacros.h \
 	L:/SoftWares/Qt/6.7.0/mingw_64/include/QtCore/qtnoop.h \
@@ -421,7 +410,6 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocated_ptr.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/allocator.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/atomic_base.h \
-	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/atomic_futex.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/atomic_lockfree_defines.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.tcc \
@@ -464,8 +452,6 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/specfun.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_abs.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_function.h \
-	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_mutex.h \
-	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/std_thread.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algo.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algobase.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_bvector.h \
@@ -492,7 +478,6 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/string_view.tcc \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stringfwd.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uniform_int_dist.h \
-	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unique_lock.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unique_ptr.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/unordered_map.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/uses_allocator.h \
@@ -503,7 +488,6 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/climits \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/clocale \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cmath \
-	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/condition_variable \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstddef \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstdint \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cstdio \
@@ -523,7 +507,6 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/string_conversions.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ext/type_traits.h \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/functional \
-	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/future \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/initializer_list \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iosfwd \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iterator \
@@ -531,7 +514,6 @@ untitled_autogen/timestamp: \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/list \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/map \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/memory \
-	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/mutex \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/new \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/numeric \
 	L:/SoftWares/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/optional \
@@ -803,7 +785,6 @@ untitled_autogen/timestamp: \
 	L:/Working/s231101/dimu/untitled/CMakeLists.txt \
 	L:/Working/s231101/dimu/untitled/digi8.cpp \
 	L:/Working/s231101/dimu/untitled/digi8.h \
-	L:/Working/s231101/dimu/untitled/file_modify_moniter.h \
 	L:/Working/s231101/dimu/untitled/main.cpp \
 	L:/Working/s231101/dimu/untitled/mainwindow.cpp \
 	L:/Working/s231101/dimu/untitled/mainwindow.h \

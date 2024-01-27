@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 64,
+				"line" : 65,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 47,
+				"line" : 48,
 				"parent" : 0
 			},
 			{
@@ -364,18 +364,19 @@
 			[
 				0,
 				1,
-				2
+				2,
+				6
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "untitled_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "untitled_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "untitled_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "untitled::@6890427a1f51a3e7e1df",
@@ -487,7 +488,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				6
 			]
 		},
 		{
@@ -496,7 +498,8 @@
 			[
 				3,
 				5,
-				6
+				8,
+				9
 			]
 		},
 		{
@@ -504,14 +507,15 @@
 			"sourceIndexes" : 
 			[
 				4,
-				7
+				7,
+				10
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				8
+				11
 			]
 		}
 	],
@@ -548,13 +552,30 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "file_modify_moniter.h",
+			"path" : "digi8.h",
 			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "digi8.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "digi8.ui",
+			"sourceGroupIndex" : 2
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/untitled_autogen/include/ui_mainwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "L:/Working/s231101/dimu/build-untitled-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/untitled_autogen/include/ui_digi8.h",
 			"sourceGroupIndex" : 1
 		},
 		{
