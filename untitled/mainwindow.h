@@ -37,6 +37,7 @@ private:
         "../vcc4.txt",
         "../vcc5.txt",
     };
+    std::string vccFilePath_ = "../vcc.txt";
     std::string regStatus_ = "000000000";
     unsigned int tics = 0;
     digi8* digitals_[10];

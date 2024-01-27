@@ -19,7 +19,7 @@ public:
     // cstr with flush frequency
     digi8(QWidget *parent,
                  std::string vccFilePath,
-                 uint32_t updatePeriod_);
+                 uint32_t _updatePeriod);
     // monitor vcc/reg file, to update reg status
     int monitorFileModification(const char* _filePath);
 

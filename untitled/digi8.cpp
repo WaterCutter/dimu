@@ -29,10 +29,10 @@ digi8::digi8(QWidget *parent, std::string vccFilePath)
 
 digi8::digi8(QWidget *parent,
              std::string vccFilePath,
-             uint32_t updatePeriod_=100)
+             uint32_t _updatePeriod=100)
     : QWidget(parent)
     , vccFilePath_(vccFilePath)
-    , updatePeriod_(updatePeriod_)
+    , updatePeriod_(_updatePeriod)
     , ui(new Ui::digi8)
 {
     ui->setupUi(this);
@@ -219,18 +219,15 @@ int digi8::monitorFileModification(const char* _filePath)
         DWORD result = WaitForSingleObject(hChange, INFINITE);
         if (result == WAIT_OBJECT_0)
         {
-            // Sleep(1000);
-            // 通知已到达，检查文件是否被修改
             FILETIME lastWriteTime;
             HANDLE hFile; // = CreateFile(filePath, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
             auto createHnadler = [&](){
                 hFile = CreateFile(wideFileName.c_str(), GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
             };
-            DWORD timeout = 2000;
-            // 开始计时
-            DWORD startTime = GetTickCount();
 
-            // 循环执行操作，直到超时
+            DWORD timeout = 2000;
+            DWORD startTime = GetTickCount();
+            // loop until timeout
             while (GetTickCount() - startTime < timeout)
             {
                 createHnadler();
