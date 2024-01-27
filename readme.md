@@ -160,7 +160,7 @@ vcc:10000000
 ```
 > the state of digital tube changes
 ---
-<video src="./video/ex2.mp4" controls></video>
+![](./video/ex2.gif)
 
 ## Learned 
 
